@@ -1,0 +1,55 @@
+{
+  "mcpServers": {
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Çalışma alanınızdaki mesajları arar, kanalları okur, tartışmaları bulur."
+    },
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Google Drive'daki belgeleri arar, okur ve getirir."
+    },
+    "Everlaw": {
+      "type": "http",
+      "url": "https://api.everlaw.com/v1/mcp",
+      "title": "Everlaw",
+      "description": "Everlaw projelerinizdeki belgeleri meta veri, anahtar kelime ve belge türüne göre arar ve getirir — inceleme bağlantılarıyla birlikte."
+    },
+    "TopCounsel": {
+      "type": "http",
+      "url": "https://api.techgc.co/api/mcp/topcounsel",
+      "title": "TopCounsel",
+      "description": "Dış avukat önerileri — hukuk departmanı topluluğu değerlendirmeleri, sıralamalar ve uzmanlık kanıtları."
+    },
+    "CourtListener": {
+      "type": "http",
+      "url": "https://mcp.courtlistener.com/",
+      "title": "CourtListener",
+      "description": "Free Law Project'in hukuki araştırma platformu — milyonlarca mahkeme kararı, PACER sicil kayıtları, hâkim profilleri ve atıf doğrulama. (ABD odaklı; Türk hukuku için mevzuat.gov.tr / UYAP bağlayıcısı önerilir.)"
+    },
+    "Aurora": {
+      "type": "http",
+      "url": "https://mcp.ai.consilio.com",
+      "title": "Aurora",
+      "description": "Salt-okunur Consilio e-keşif — dosyaları bulur, çalışma alanlarını listeler, tam metin arama, yapay zekâ destekli çapraz-dosya araştırması, her kayıt kaynak referanslı."
+    },
+    "Trellis": {
+      "type": "http",
+      "url": "https://mcp.trellis.law/anthropic",
+      "title": "Trellis",
+      "description": "ABD eyalet mahkemesi veri seti — sicil kayıtları, kararlar, hükmler, hâkim ve karşı avukat analitiği. (ABD odaklı)"
+    }
+  },
+  "recommendedCategories": [
+    "ediscovery",
+    "legal-research",
+    "case-law",
+    "court-analytics",
+    "outside-counsel-network",
+    "documents",
+    "chat"
+  ]
+}
