@@ -4,7 +4,7 @@ Bu proje, Anthropic'in avukatlar için çıkardığı **`claude-for-legal`** plu
 **Türk yargı sistemine uyarlanmış** sürümüdür.
 
 > **Bu dosya proje hafızasıdır (Claude Code her oturumda otomatik okur).** Üst düzey
-> kuralları ve "nerede ne var"ı burada tut. Granüler ilerleme **[.claude/MIGRATION.md](.claude/MIGRATION.md)**
+> kuralları ve "nerede ne var"ı burada tut. Granüler ilerleme **[.claude/MIGRATION.md](../.claude/MIGRATION.md)**
 > dosyasındadır. İkisi tutarlı kalmalı: bir karar değişirse buradaki kural + oradaki
 > tracker birlikte güncellenir.
 

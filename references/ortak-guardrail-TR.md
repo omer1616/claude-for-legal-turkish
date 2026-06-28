@@ -22,7 +22,7 @@
 > (tüm eklentilerce paylaşılır).
 >
 > `[doğrulanacak]` etiketli yerler: Türk hukukundaki tam karşılığı/kapsamı bir
-> Türk hukukçusu tarafından teyit edilmeli. Bkz. [.claude/MIGRATION.md](../.claude/MIGRATION.md)
+> Türk hukukçusu tarafından teyit edilmeli. Bkz. [.claude/MIGRATION.md](../../.claude/MIGRATION.md)
 > açık notlar bölümü.
 
 ---
