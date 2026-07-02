@@ -1,0 +1,40 @@
+# eklenti-merkezi için varsayılan izin listesi (allowlist)
+# /eklenti-merkezi:ilk-kurulum tarafından oluşturuldu — neyin güvenilir olduğunu değiştirmek için bu dosyayı düzenleyin.
+# Tam şema için eklenti-kurucu/references/allowlist.md dosyasına bakın.
+#
+# GÜVENLİK NOTU: Bu varsayılan KISITLAYICIDIR (RESTRICTIVE) — bilinmeyen kaynaklar reddedilir.
+# İlk-kurulum görüşmesi, BT tarafından yönetilen bir yayıncı listesi olmayan yalnız
+# çalışan uygulayıcılar için bunu izin verici (permissive) olarak değiştirmeyi teklif eder.
+# Eğer kurulumu hiç yapmadıysanız ve bunu görüyorsanız, kurucu açıkça listelenmeyen her
+# kaynağı reddedecektir. Bu kasıtlıdır: kapalı başarısızlık (fail-closed), ayrıcalıklı bir
+# hukuki çalışma alanına üçüncü taraf kod kuran bir araç için doğru varsayılandır.
+# Yapılandırmak için /eklenti-merkezi:ilk-kurulum çalıştırın veya takası (tradeoff)
+# anlıyorsanız bu dosyayı doğrudan düzenleyin.
+
+mode: restrictive    # restrictive (kısıtlayıcı, varsayılan) | permissive (işaretle-ve-sor)
+
+registries:
+  - https://github.com/legalopsconsulting/lpm-skills
+  # Lawvable — başlangıç ortağı, lawvable GitHub organizasyonu altındaki iki derlenmiş kayıt.
+  - https://github.com/lawvable/awesome-legal-skills
+  - https://github.com/lawvable/agent-skills
+
+publishers:
+  - legalopsconsulting
+  - lawvable
+
+connectors: []
+  # Kısıtlayıcı modda boş olması, HERHANGİ BİR MCP bağlayıcısı beyan eden topluluk
+  # eklentilerinin reddedileceği anlamına gelir. Onaylanmış MCP sunucu URL'lerini buraya
+  # ekleyin veya reddetmek yerine işaretle-ve-sor için izin verici (permissive) moda geçin.
+
+licenses:
+  # Topluluk eklentilerinin taşıyabileceği SPDX lisans tanımlayıcıları. Kişisel varsayılanlar.
+  # Dağıtım bağlamına göre (kişisel / firma-içi / ürün-gömülü) ilk-kurulum tarafından
+  # ayarlanır. Bkz. eklenti-kurucu/references/allowlist.md.
+  - MIT
+  - Apache-2.0
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - ISC
+  - CC0-1.0
