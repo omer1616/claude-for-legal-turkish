@@ -1,0 +1,8 @@
+{
+  "name": "fikri-mulkiyet",
+  "version": "1.0.2",
+  "description": "Fikri mülkiyet süreçlerinizi yönetir: marka temizlik taraması (clearance) ve patent FTO (serbest kullanım) triyajı yapar, buluş bildirimlerini patentlenebilirlik açısından ön taramadan geçirir, açık kaynak kod (OSS) uyumluluğunu denetler, sözleşmelerdeki FM maddelerini inceler ve portföy kayıtları ile yenileme tarihlerini takip eder. (Not: DMCA ve ihlal bildirimleri (B kademesi) şu an kullanılamamaktadır.)",
+  "author": {
+    "name": "Anthropic"
+  }
+}

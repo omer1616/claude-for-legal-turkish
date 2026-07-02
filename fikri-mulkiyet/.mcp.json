@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "Solve Intelligence": {
+      "type": "http",
+      "url": "https://api.solveintelligence.com/mcp/",
+      "title": "Solve Intelligence",
+      "description": "Patent workflows — search patent and non-patent literature, legal texts, SEP technical standards, prior art, claim analysis."
+    },
+    "Lexpera": {
+      "type": "http",
+      "url": "https://mcp.lexpera.com.tr/",
+      "title": "Lexpera",
+      "description": "[YER_TUTUCU - TÜRKİYE İÇİN] Türk hukuku içtihat ve mevzuat veritabanı."
+    },
+    "Kazanci": {
+      "type": "http",
+      "url": "https://mcp.kazanci.com.tr/",
+      "title": "Kazancı Hukuk",
+      "description": "[YER_TUTUCU - TÜRKİYE İÇİN] Türk hukuku içtihat ve mevzuat veritabanı."
+    },
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Search messages, read channels, find discussions across your workspace."
+    },
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Search, read, and fetch documents from Google Drive."
+    }
+  },
+  "recommendedCategories": [
+    "ip-management",
+    "legal-research",
+    "case-law",
+    "documents",
+    "chat",
+    "email"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Çalışma alanınızdaki mesajları arar, kanalları okur, tartışmaları bulur."
+    },
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Google Drive'daki belgeleri arar, okur ve getirir."
+    }
+  },
+  "recommendedCategories": [
+    "hris",
+    "documents",
+    "chat",
+    "email"
+  ]
+}

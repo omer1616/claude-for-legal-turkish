@@ -1,0 +1,8 @@
+{
+  "name": "is-hukuku",
+  "version": "1.0.2",
+  "description": "İşe alım ve işten çıkarmaları yargı çevresine özgü risk işaretleri için inceler, iç soruşturmaları yönetir, izin sürelerini kaçırılmadan önce takip eder, uluslararası genişlemeyi planlar ve mevzuatın farklılaştığı yerlerde profil eklerini içeren politikalar taslaklar.",
+  "author": {
+    "name": "Anthropic"
+  }
+}

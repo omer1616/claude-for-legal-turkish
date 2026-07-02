@@ -1,0 +1,33 @@
+# Yenileme Kaydı
+#
+# saas-inceleme (devirler) ve yenileme-takibi Mod 3 (CLM taraması) tarafından
+# doldurulur. Her kayıt bir sözleşmenin ne zaman yenilendiğini ve ne zaman iptal
+# etmeniz gerektiğini takip eder.
+#
+# yenileme-ajani agent'ı bunu haftalık okur ve ne geldiğini paylaşır.
+
+yenilemeler: []
+
+# Örnek kayıt (gerçek veri olduğunda kaldırın):
+#
+# - karsi_taraf: "Acme SaaS A.Ş."
+#   sozlesme: "Acme Platform Abonelik Sözleşmesi"
+#   imza_tarihi: 2025-06-15
+#   ilk_sure_bitisi: 2026-06-15
+#   guncel_sure_bitisi: 2026-06-15     # her otomatik yenilemeden sonra ileri sarar; cancel_by tarihlerini bundan hesapla
+#   yenileme_mekanizmasi: "otomatik-yenileme yıllık"
+#   bildirim_suresi_gun: 60
+#   bildirim_yontemi: "e-posta"           # e-posta / portal / iadeli taahhütlü / KEP / sözleşme §X'e göre
+#   iletim_tamponu_gun: 0                 # elektronik için 0, yurt içi iadeli taahhütlü için 5, uluslararası kayıtlı posta için 10 — veya sözleşmede belirtilmişse ona göre
+#   iptal_son_takvim: 2026-04-16          # guncel_sure_bitisi eksi bildirim_suresi_gun
+#   iptal_son_gecerli: 2026-04-16         # gerekirse son iş gününe geri yuvarlanmış
+#   gonderim_son_gecerli: 2026-04-16      # iptal_son_gecerli eksi iletim_tamponu_gun — bildirimi GÖNDERMENİZ gereken tarih
+#   iptal_son_yuvarlama_notu: ""          # ör. "2026-11-01 Pazar gününden geri yuvarlandı; sözleşmenin iş günü tanımına karşı doğrula"
+#   iptal_son_kaynagi: "[model hesaplaması — bildirim maddesine karşı doğrula]"
+#   yenilemede_fiyat: "o anki liste fiyatı (tavansız)"
+#   yillik_tutar: 48000
+#   is_birimi_sahibi: "jane@sirket.com"
+#   clm_id: "IC-12345"                    # bağlıysa
+#   docusign_zarfi: "abc-123"            # bağlıysa
+#   durum: "aktif"                        # aktif | iptal_edildi | yenilendi | suresi_gecti
+#   notlar: "Fiyat tavansız — yenileme öncesi tekrar gözden geçir. Alternatif satıcılar: X, Y."

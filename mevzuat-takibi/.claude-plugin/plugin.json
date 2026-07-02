@@ -1,0 +1,8 @@
+{
+  "name": "mevzuat-takibi",
+  "version": "1.0.0",
+  "description": "Resmî Gazete ve mevzuat beslemelerini izler, yeni kuralları politika kütüphanenizle karşılaştırır, uyum boşluklarını çıkarır ve takımınızın okuyacağı mevzuat özetini yazar.",
+  "author": {
+    "name": "Anthropic"
+  }
+}

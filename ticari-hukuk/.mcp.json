@@ -1,0 +1,56 @@
+{
+  "mcpServers": {
+    "Ironclad": {
+      "type": "http",
+      "url": "https://mcp.na1.ironcladapp.com/mcp",
+      "title": "Ironclad",
+      "description": "Sözleşme deponuzu ve iş akışlarınızı düz dille arayın — süresi yaklaşan MSA'lar, fesih maddeleri, satıcı sözleşmeleri — yetkilerinizle sınırlı. (Genel CLM aracı; TR mevzuatına özgü değil.)"
+    },
+    "DocuSign": {
+      "type": "http",
+      "url": "https://mcp.docusign.com/mcp",
+      "title": "DocuSign",
+      "description": "Sözleşme arama, durum takibi ve imza iş akışları. (TR'de e-imza için KEP/e-imza sağlayıcılarınızla entegrasyon ayrıca değerlendirilmeli `[doğrulanacak]`.)"
+    },
+    "iManage": {
+      "type": "http",
+      "url": "https://cloudimanage.com/mcp/work",
+      "title": "iManage",
+      "description": "Claude'a bağlanan yönetilen iManage içeriği — belgeler iManage'de kalır, erişim izinlere bağlı ve denetlenebilir."
+    },
+    "TopCounsel": {
+      "type": "http",
+      "url": "https://api.techgc.co/api/mcp/topcounsel",
+      "title": "TopCounsel",
+      "description": "Dış avukat önerileri — hukuk departmanı topluluğu değerlendirmeleri, sıralamalar ve uzmanlık kanıtları. (ABD-ağırlıklı topluluk; TR için Lexpera/Kazancı ağı veya baro listeleri tercih edilebilir.)"
+    },
+    "Definely": {
+      "type": "http",
+      "url": "https://mcp.uk.definely.com/api/proxy/core-mcp",
+      "title": "Definely",
+      "description": "Sözleşme yapısına canlı, deterministik erişim — tanımları çözer, çapraz referansları doğrular, bağımlılıkları haritalar, yapısal karşılaştırmalar çalıştırır."
+    },
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Çalışma alanınızdaki mesajları arar, kanalları okur, tartışmaları bulur."
+    },
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Google Drive'daki belgeleri arar, okur ve getirir."
+    }
+  },
+  "recommendedCategories": [
+    "contract-management",
+    "e-signature",
+    "legal-document-management",
+    "email",
+    "documents",
+    "chat",
+    "contract-review",
+    "outside-counsel-network"
+  ]
+}
