@@ -8,6 +8,15 @@
   },
   "plugins": [
     {
+      "name": "hukuk-asistani",
+      "displayName": "Hukuk Asistanı",
+      "source": "./hukuk-asistani",
+      "description": "Avukatın günlük çalışma asistanı — dava ve dosya takibi, sözleşme inceleme ve hazırlama, dilekçe yazımı, hukuki metin özetleme ve genel hukuki araştırma. Beş dakikada kurulur, teknik bilgi ve ek bağlantı gerektirmez. Başlamak için önerilen eklenti.",
+      "author": {
+        "name": "Ömer İnci"
+      }
+    },
+    {
       "name": "dava-takibi",
       "displayName": "Dava Takibi",
       "source": "./dava-takibi",

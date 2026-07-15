@@ -1,0 +1,8 @@
+{
+  "name": "hukuk-asistani",
+  "version": "1.0.0",
+  "description": "Avukatın günlük çalışma asistanı — dava ve dosya takibi, sözleşme inceleme ve hazırlama, dilekçe yazımı, hukuki metin özetleme ve genel hukuki araştırma. Beş dakikada kurulur, teknik bilgi ve ek bağlantı gerektirmez.",
+  "author": {
+    "name": "Ömer İnci"
+  }
+}
