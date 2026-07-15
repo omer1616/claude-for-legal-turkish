@@ -3,7 +3,8 @@
   "name": "claude-for-legal-turkish",
   "description": "Türk hukuk sistemine uyarlanmış hukuk pratiği eklentileri — dava takibi, ticari sözleşmeler, şirketler hukuku, iş hukuku, fikri mülkiyet ve mevzuat takibi.",
   "owner": {
-    "name": "Anthropic"
+    "name": "Ömer İnci",
+    "email": "omerinci415@gmail.com"
   },
   "plugins": [
     {
@@ -12,7 +13,7 @@
       "source": "./dava-takibi",
       "description": "Dava portföyünü yönetir — dosyalar, son tarihler, ihtiyati tedbirler, talepler, dış avukat — ve işi yapar: kronoloji, bilirkişi hazırlığı, belge özetleri, taslak yazışmalar. Şirket içi, büro veya bağımsız çalışma biçimine uyarlanır.",
       "author": {
-        "name": "Anthropic"
+        "name": "Ömer İnci"
       }
     },
     {
@@ -21,7 +22,7 @@
       "source": "./ticari-hukuk",
       "description": "Satıcı sözleşmelerini, gizlilik sözleşmelerini (NDA) ve SaaS aboneliklerini oyun kitabınıza göre inceler, yenileme ve fesih-bildirim son tarihlerini takip eder, eskalasyonları doğru onaylayıcıya yönlendirir ve incelemeleri iş birimlerinin okuyacağı özetlere çevirir.",
       "author": {
-        "name": "Anthropic"
+        "name": "Ömer İnci"
       }
     },
     {
@@ -30,7 +31,7 @@
       "source": "./sirketler-hukuku",
       "description": "Şirketler hukuku işlemlerini yönetir — M&A due diligence, kapanış kontrol listeleri, yönetim kurulu tutanağı, yazılı onay (TTK m.390 vd.) ve kapanış sonrası entegrasyon.",
       "author": {
-        "name": "Anthropic"
+        "name": "Ömer İnci"
       }
     },
     {
@@ -39,7 +40,7 @@
       "source": "./is-hukuku",
       "description": "İşe alımı ve iç soruşturmaları yönetir, izin sürelerini takip eder, uluslararası genişlemeyi planlar ve mevzuatın farklılaştığı yerlerde profil eklerini içeren politikalar taslaklar.",
       "author": {
-        "name": "Anthropic"
+        "name": "Ömer İnci"
       }
     },
     {
@@ -48,7 +49,7 @@
       "source": "./fikri-mulkiyet",
       "description": "Marka temizlik taraması ve patent FTO (serbest kullanım) triyajı yapar, buluş bildirimlerini patentlenebilirlik açısından ön taramadan geçirir, açık kaynak kod uyumluluğunu denetler, sözleşmelerdeki FM maddelerini inceler ve portföy/yenileme tarihlerini takip eder.",
       "author": {
-        "name": "Anthropic"
+        "name": "Ömer İnci"
       }
     },
     {
@@ -57,7 +58,7 @@
       "source": "./mevzuat-takibi",
       "description": "Resmî Gazete ve mevzuat beslemelerini izler, yeni kuralları politika kütüphanenizle karşılaştırır, uyum boşluklarını çıkarır ve takımınızın okuyacağı mevzuat özetini yazar.",
       "author": {
-        "name": "Anthropic"
+        "name": "Ömer İnci"
       }
     },
     {
@@ -66,7 +67,7 @@
       "source": "./eklenti-merkezi",
       "description": "Topluluk hukuk eklentilerini bulur, değerlendirir ve kurar — ortamınıza hiçbir şey inmeden önce bir güvenlik incelemesi kapısından geçirir.",
       "author": {
-        "name": "Anthropic"
+        "name": "Ömer İnci"
       }
     }
   ]
