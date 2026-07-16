@@ -39,6 +39,38 @@ altına, değilse ilgili tür klasörüne yazılır. `dosyalar/<slug>/dosya.md` 
 kaynağıdır — ayrı bir sicil/YAML dosyası tutulmaz; `/hukuk-asistani:dosyalarim` bu
 dosyaların üstbilgisini (frontmatter) tarayarak listeler.
 
+## Word (.docx) ikizi
+
+Bu eklenti Markdown'ı iç format olarak kullanır, ama teslim edilen belge Word'de
+açılmalı — ham `.md` avukatın önüne "düzeni bozuk" bir şey olarak düşer. Bu yüzden
+**dışa dönük teslimatlar** (`sozlesme-incele`, `sozlesme-hazirla`, `dilekce`,
+`ozetle`, `arastir` skill'lerinin diske yazdığı çıktılar) `.md`'nin yanına aynı
+adla bir `.docx` ikizi de yazar. `dosyalar/<slug>/dosya.md` (yaşayan kayıt,
+frontmatter'lı) bu kurala girmez — dönüştürülmez.
+
+**Nasıl:** `.md` dosyasını yazdıktan hemen sonra Bash ile çalıştır:
+
+```
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/md_to_docx.py" <yol>.md <yol>.docx
+```
+
+Bu betik yalnızca Python'un standart kütüphanesini kullanır — pandoc, python-docx
+veya başka bir kurulum gerektirmez; sistemde `python3` varsa çalışır (macOS ve
+çoğu Linux dağıtımında öntanımlı gelir).
+
+Desteklediği biçimler: başlık (`#`/`##`/`###`), **kalın**, *eğik*, `satır içi kod`
+(`[incele]`/`[doğrula]` gibi etiketleri vurgulu gösterir), madde listesi, numaralı
+liste, `>` alıntı, yatay çizgi, GitHub-stili tablo. Bunların dışına çıkma — ör.
+iç içe liste veya HTML gömme gibi şeyler `.docx`'te düzgün görünmez.
+
+**Sessizce başarısız olma.** Komut sıfırdan farklı bir kodla dönerse veya
+`python3` bulunamazsa: kullanıcıya "Word kopyası oluşturulamadı, yalnızca .md
+kaydedildi — [neden]" de, `.md`'yi yine de teslim et. Asla `.docx` üretilmiş gibi
+davranma.
+
+Kapanış mesajında ikisini de söyle: "Word'de doğrudan açabileceğin `<ad>.docx`
+ve düzenlemek istersen `<ad>.md` olarak kaydettim."
+
 ---
 
 <!-- Aşağıdaki bölümler references/ortak-guardrail-TR.md kanonik bloğundan kopyalanmıştır

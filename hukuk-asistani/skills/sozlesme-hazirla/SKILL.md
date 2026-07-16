@@ -65,8 +65,9 @@ taslağın ÜSTÜNDE ayrı blok olarak verilir (sessiz mod kuralı). İnceleyen 
 az: doldurulacak `[.........]` sayısı, `[incele]` sayısı, şekil şartı uyarısı varsa o.
 
 Kaydet: dosyaya bağlıysa `dosyalar/<slug>/`, değilse `sozlesmeler/` altına
-`<tur>-taslak-v1.md`. Kullanıcıya söyle: "Word'e aktarmak için dosyayı açıp
-kopyalayabilirsin; istersen ben de gözden geçirilmiş v2 çıkarırım."
+`<tur>-taslak-v1.md`. Eklenti CLAUDE.md'deki **Word (.docx) ikizi** kuralına göre aynı
+adla `.docx` üret. Kullanıcıya söyle: "`<tur>-taslak-v1.docx` dosyasını doğrudan
+Word'de açıp düzenleyebilirsin; istersen ben de gözden geçirilmiş v2 çıkarırım."
 
 Rol profilde **hukukçu değil** ise kapanışta bir kez: "Bu taslak imzalanmadan önce bir
 avukat tarafından incelenmeli — özellikle `[incele]` işaretli yerler senin durumuna

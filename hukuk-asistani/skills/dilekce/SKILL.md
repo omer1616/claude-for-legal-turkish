@@ -97,6 +97,8 @@ sonuç doğuran adımdır — bir avukatla incelenip incelenmediğini sor, tasla
 götüreceğin çalışma metni" olarak çerçevele.
 
 Kaydet: dosyaya bağlıysa `dosyalar/<slug>/<tur>-v1.md`, değilse `dilekceler/` altına.
+Eklenti CLAUDE.md'deki **Word (.docx) ikizi** kuralına göre aynı adla `.docx` üret —
+mahkemeye/notere sunulacak metin çoğu zaman Word biçiminde isteniyor.
 
 Karar ağacıyla kapat — tipik: (1) işaretli boşlukları birlikte kapatalım, (2) karşı
 tarafın muhtemel cevabını çıkarayım, (3) delil listesini ayrıntılandırayım.

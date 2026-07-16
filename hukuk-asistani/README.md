@@ -159,14 +159,17 @@ Hukuk-Asistani/
 ├── dosyalar/          # her dava/iş için bir klasör — kayıt, notlar, o dosyanın belgeleri
 │   └── yilmaz-iscilik-alacagi/
 │       ├── dosya.md           # dosya kaydı: bilgiler, tarihler, tarihli notlar
-│       └── cevap-dilekce-v1.md
+│       ├── cevap-dilekce-v1.md
+│       └── cevap-dilekce-v1.docx      # aynı belgenin Word kopyası
 ├── sozlesmeler/       # dosyaya bağlı olmayan sözleşme taslakları ve incelemeler
 ├── dilekceler/        # dosyaya bağlı olmayan dilekçe taslakları
 ├── ozetler/           # belge özetleri
 └── arastirmalar/      # kaydedilen araştırma notları
 ```
 
-Kural basit: çıktı kayıtlı bir dosyaya aitse o dosyanın klasörüne, değilse tür klasörüne yazılır. Hepsi düz metin — Word'e kopyalayabilir, yedekleyebilir, dilediğin gibi taşıyabilirsin. Profilin ise `~/.claude/plugins/config/claude-for-legal-turkish/hukuk-asistani/` altında durur ve eklenti güncellemelerinden etkilenmez.
+Kural basit: çıktı kayıtlı bir dosyaya aitse o dosyanın klasörüne, değilse tür klasörüne yazılır. **Teslim edilecek her belge iki kopya halinde durur:** `.md` (düzenlemesi kolay, düz metin) ve `.docx` (doğrudan Word'de açılan, biçimi bozulmamış kopya) — hangisini kullanacağın sana kalmış. Yalnızca `dosyalar/<slug>/dosya.md` (dosyanın yaşayan kaydı, sürekli güncellenen notlar) bu ikizlemenin dışındadır. Profilin ise `~/.claude/plugins/config/claude-for-legal-turkish/hukuk-asistani/` altında durur ve eklenti güncellemelerinden etkilenmez.
+
+`.docx` üretimi eklentiye gömülü, bağımsız bir betikle yapılır — pandoc veya başka bir program kurmana gerek yok; bilgisayarında zaten bulunan `python3` yeterli.
 
 ---
 

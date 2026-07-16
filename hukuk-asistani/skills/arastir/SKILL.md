@@ -66,6 +66,8 @@ değerlendirmesi gereken yerler.
 
 Sorulmadan diske yazma. Kullanıcı isterse veya araştırma kayıtlı bir dosya içinse
 `arastirmalar/` ya da `dosyalar/<slug>/` altına `<konu>-arastirma-YYYY-AA-GG.md`.
+Diske yazarsan eklenti CLAUDE.md'deki **Word (.docx) ikizi** kuralına göre aynı adla
+`.docx` de üret.
 
 Kapanış seçenekleri soruya göre — tipik: (1) bu araştırmayı dilekçe diline çevireyim,
 (2) müvekkile sade dille anlatayım, (3) karşı görüşün dayanaklarını da çıkarayım.

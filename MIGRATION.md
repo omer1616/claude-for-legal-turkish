@@ -45,6 +45,24 @@ inceleme + hazırlama, dilekçe/ihtarname, özetleme, genel araştırma.
   yok; dosya bağlamı çalışma klasörü kuralıyla yönetiliyor). Kanonik blok değişirse
   bu profil de güncellenmeli.
 - Standart slug sözlüğüne uyum: kurulum skill'i `ilk-kurulum` (tüm plugin'lerle aynı).
+- **`.docx` ikizi, bağımsız betikle** (`scripts/md_to_docx.py`) — pandoc/python-docx
+  gibi ek kurulum istemez, yalnızca Python stdlib kullanır; sistemde `python3` varsa
+  çalışır. `sozlesme-incele`, `sozlesme-hazirla`, `dilekce`, `ozetle`, `arastir`
+  diske yazdığı her teslimatın yanına aynı adla `.docx` üretir (kural: eklenti
+  CLAUDE.md `## Word (.docx) ikizi`). `dosyalar/<slug>/dosya.md` (yaşayan kayıt,
+  frontmatter'lı) bilinçli olarak bu kapsamın dışında tutuldu — sürekli büyüyen bir
+  kaydı her notta yeniden Word'e çevirmek anlamsız; frontmatter da düz metin
+  dönüştürücüde iyi görünmüyor.
+  - Doğrulama: 2026-07-16'da örnek `.md` (başlık, tablo, alıntı, liste, `[incele]`/
+    `[doğrula]` etiketleri, emoji) ile test edildi — üretilen `.docx` zip+XML olarak
+    yapısal geçerli (`zipfile.testzip`, `xml.dom.minidom`) ve macOS'un `textutil`
+    aracıyla (bağımsız OOXML okuyucu) içerik kaybı olmadan açıldı.
+  - `[doğrulanacak]` — gerçek Microsoft Word / LibreOffice'te görsel olarak
+    açılmadı; yalnızca yapısal + `textutil` doğrulaması yapıldı.
+  - Bilinen sınır: numaralı/madde listeleri Word'ün otomatik numaralandırma
+    özelliğini (`w:numPr`) kullanmıyor, düz metin öneki (`1.`, `•`) olarak
+    yazılıyor — kullanıcı Word'de sırayı değiştirirse numaralar otomatik
+    güncellenmez. İç içe liste ve gömülü HTML desteklenmiyor.
 
 **Açık işler:**
 - [ ] Gerçek kullanıcı testi: kurulum akışı teknik olmayan bir avukatla denenmeli.

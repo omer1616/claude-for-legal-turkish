@@ -65,7 +65,9 @@ ayrıntılı sürüm; sorup bekletme — kısa yaz, sonunda "ayrıntılı ister 
 
 Kullanıcı isterse (veya belge kayıtlı bir dosyaya aitse) `ozetler/` ya da
 `dosyalar/<slug>/` altına `<konu>-ozet-YYYY-AA-GG.md` kaydet; her özet için sormadan
-diske yazma — sohbette vermek çoğu zaman yeterli.
+diske yazma — sohbette vermek çoğu zaman yeterli. Diske yazarsan eklenti CLAUDE.md'deki
+**Word (.docx) ikizi** kuralına göre aynı adla `.docx` de üret (müvekkile/yönetime
+iletilecekse Word kopyası işini kolaylaştırır).
 
 Kapanışta kısa seçenekler: (1) ayrıntılı sürüm, (2) belirli bölümü derinleştir,
 (3) [karara itiraz noktaları çıkar / sözleşme için tam inceleme / rapora itiraz

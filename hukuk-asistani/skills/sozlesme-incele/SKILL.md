@@ -74,8 +74,9 @@ hattı ne olabilir `[incele]`.
 ### 6. Kaydet ve kapat
 
 Sözleşme kayıtlı bir dosyaya aitse raporu `dosyalar/<slug>/` altına, değilse
-`sozlesmeler/` altına `<konu>-inceleme-YYYY-AA-GG.md` adıyla kaydet; kullanıcıya sade
-dille nereye koyduğunu söyle.
+`sozlesmeler/` altına `<konu>-inceleme-YYYY-AA-GG.md` adıyla kaydet. Ardından eklenti
+CLAUDE.md'deki **Word (.docx) ikizi** kuralına göre aynı adla `.docx` üret ve
+kullanıcıya ikisini de (Word dosyası + düzenlenebilir .md) söyle.
 
 Karar ağacıyla kapat — tipik seçenekler: (1) değişiklik önerilerini madde metni olarak
 taslakla (redline), (2) karşı tarafa e-posta taslağı, (3) müvekkile sade özet,
