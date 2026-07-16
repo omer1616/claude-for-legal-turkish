@@ -51,6 +51,27 @@ inceleme + hazırlama, dilekçe/ihtarname, özetleme, genel araştırma.
 - [ ] `dilekce` iskeletlerinin (özellikle istinaf/temyiz ve icra itiraz formatları)
       bir Türk avukat tarafından gözden geçirilmesi `[doğrulanacak]`.
 - [ ] `dosyalarim` süre/adli tatil mantığının örnek dosyalarla smoke testi.
+- [ ] **UYAP entegrasyonu — araştırılacak.** 2026-07-16'da değerlendirildi, henüz bir
+      şey inşa edilmedi. Bilinen durum:
+      - UYAP'ın bireysel geliştiricilere/eklentilere açık genel bir API'si yok.
+      - Resmî yol **UYAP Web Servisi entegrasyonu** — Adalet Bakanlığı UYAP Bilgi
+        İşlem Genel Müdürlüğü'ne başvuru, sözleşme, muhtemelen sertifikalı
+        kurum/yazılım firması statüsü gerektiriyor `[doğrulanacak]`. Bu eklentinin
+        "bireysel avukata dağıtılan plugin" ölçeğine göre ağır.
+      - **KEP / e-Tebligat API** daha ulaşılabilir bir ara nokta olabilir — UYAP'ın
+        kendisine değil, PTT/diğer KEP sağlayıcılarının tebligat API'sine bağlanıp
+        yalnızca "yeni tebligat geldi mi" sinyalini otomatikleştirebilir
+        `[doğrulanacak — kapsam ve başvuru süreci]`.
+      - **Tarayıcı otomasyonu** (Claude in Chrome ile kullanıcının kendi UYAP Avukat
+        Portalı oturumu) teknik olarak mümkün ama: (a) giriş e-imza/mobil imza
+        donanımı gerektirdiği için otomatikleştirilemez, kullanıcı her seferinde
+        kendi eliyle giriş yapmalı; (b) kullanım şartlarının otomatik erişime izin
+        verip vermediği belirsiz `[doğrulanacak]`; (c) merkezi bir özellik olarak
+        dağıtılamaz — olsa olsa kullanıcı başına, isteğe bağlı bir tarif olur.
+      - **Sonuç:** şimdilik `dosya-notu`/`yeni-dosya`'daki elle kopyala-yapıştır akışı
+        kalıcı çözüm değil, en güvenli fallback. Öncelik sırası: önce KEP/e-Tebligat
+        yolunu araştır, sonra (talep varsa) tarayıcı-otomasyonu opsiyonunu
+        dokümante et, resmî UYAP Web Servisi'ni en son değerlendir.
 
 ## Proje geneli açık notlar
 
