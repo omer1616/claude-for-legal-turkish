@@ -46,9 +46,14 @@ inceleme + hazırlama, dilekçe/ihtarname, özetleme, genel araştırma.
   bu profil de güncellenmeli.
 - Standart slug sözlüğüne uyum: kurulum skill'i `ilk-kurulum` (tüm plugin'lerle aynı).
 - **`.docx` ikizi, bağımsız betikle** (`scripts/md_to_docx.py`) — pandoc/python-docx
-  gibi ek kurulum istemez, yalnızca Python stdlib kullanır; sistemde `python3` varsa
-  çalışır. `sozlesme-incele`, `sozlesme-hazirla`, `dilekce`, `ozetle`, `arastir`
-  diske yazdığı her teslimatın yanına aynı adla `.docx` üretir (kural: eklenti
+  gibi *ek* bir kurulum istemez (yalnızca Python stdlib kullanır), ama **Python'un
+  kendisi hâlâ gerçek bir bağımlılıktır** — sıfır bağımlılık değildir. macOS/Linux'ta
+  genelde hazır gelir, **Windows'ta genelde gelmez** `[doğrulanacak — Windows'ta
+  fiilen ne kadar yaygın eksik, test edilmedi]`. `ilk-kurulum` bunu bir kez test edip
+  kullanıcıya dürüstçe söylüyor (adım 5); her skill çağrısında da `python3` → `python`
+  sırasıyla zarifçe kontrol ediliyor, ikisi de yoksa `.md` yine teslim ediliyor, yalnızca
+  Word ikizi eksik kalıyor. `sozlesme-incele`, `sozlesme-hazirla`, `dilekce`, `ozetle`,
+  `arastir` diske yazdığı her teslimatın yanına aynı adla `.docx` üretir (kural: eklenti
   CLAUDE.md `## Word (.docx) ikizi`). `dosyalar/<slug>/dosya.md` (yaşayan kayıt,
   frontmatter'lı) bilinçli olarak bu kapsamın dışında tutuldu — sürekli büyüyen bir
   kaydı her notta yeniden Word'e çevirmek anlamsız; frontmatter da düz metin
@@ -56,13 +61,21 @@ inceleme + hazırlama, dilekçe/ihtarname, özetleme, genel araştırma.
   - Doğrulama: 2026-07-16'da örnek `.md` (başlık, tablo, alıntı, liste, `[incele]`/
     `[doğrula]` etiketleri, emoji) ile test edildi — üretilen `.docx` zip+XML olarak
     yapısal geçerli (`zipfile.testzip`, `xml.dom.minidom`) ve macOS'un `textutil`
-    aracıyla (bağımsız OOXML okuyucu) içerik kaybı olmadan açıldı.
+    aracıyla (bağımsız OOXML okuyucu) içerik kaybı olmadan açıldı. Ayrıca
+    `python3`/`python` algılama tek satırındaki bir parantez hatası (zsh'de sol-sağ
+    eşit öncelik nedeniyle ikinci dal gereksiz tetikleniyordu) bulunup düzeltildi.
   - `[doğrulanacak]` — gerçek Microsoft Word / LibreOffice'te görsel olarak
-    açılmadı; yalnızca yapısal + `textutil` doğrulaması yapıldı.
+    açılmadı; yalnızca yapısal + `textutil` doğrulaması yapıldı. Ayrıca Windows'ta
+    hiç test edilmedi — `python`/`python3` algılama mantığı yalnızca zsh/macOS'ta
+    doğrulandı.
   - Bilinen sınır: numaralı/madde listeleri Word'ün otomatik numaralandırma
     özelliğini (`w:numPr`) kullanmıyor, düz metin öneki (`1.`, `•`) olarak
     yazılıyor — kullanıcı Word'de sırayı değiştirirse numaralar otomatik
     güncellenmez. İç içe liste ve gömülü HTML desteklenmiyor.
+  - **Açık iyileştirme fikri (yapılmadı):** Windows'ta Python da yoksa tamamen
+    "Word ikizi yok" durumuna düşülüyor. PowerShell `Compress-Archive` üzerinden
+    paralel bir yol yazılabilir ama bu ayrı bir implementasyonun bakımı demek —
+    şimdilik değmedi, gerçek kullanıcı geri bildirimi bekleniyor.
 
 **Açık işler:**
 - [ ] Gerçek kullanıcı testi: kurulum akışı teknik olmayan bir avukatla denenmeli.

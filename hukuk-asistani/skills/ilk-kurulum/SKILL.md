@@ -84,7 +84,33 @@ Seçilen kökte şu klasörleri oluştur: `dosyalar/`, `sozlesmeler/`, `dilekcel
 Asistanı tarafından kullanıldığını, hangi alt klasörde ne olduğunu ve dosyaların düz
 metin olduğunu (istediği programla açabileceğini) iki paragrafta anlat.
 
-### 5. Profili yaz
+### 5. Word (.docx) desteğini kontrol et
+
+Sözleşme, dilekçe, özet ve araştırma çıktıları `.md` yanında bir de Word (`.docx`)
+kopyasıyla kaydedilir (bkz. eklenti CLAUDE.md `## Word (.docx) ikizi`). Bunun için
+makinede Python bulunması gerekiyor — macOS/Linux'ta genelde hazır gelir,
+Windows'ta çoğunlukla gelmez. Bash ile gerçekten test et (yalnızca varlığını değil,
+çalıştığını):
+
+```
+(command -v python3 >/dev/null 2>&1 && python3 --version) || (command -v python >/dev/null 2>&1 && python --version) || echo "Python bulunamadi"
+```
+
+Sonuca göre kullanıcıya **tek satırda dürüstçe** söyle — sadece varsayma:
+
+- Bulunduysa: "Word kopyaları otomatik üretilecek (Python bulundu)."
+- Bulunamadıysa: "Bu bilgisayarda Python bulamadım — sözleşme/dilekçe/özet çıktıları
+  yalnızca `.md` (düz metin) olarak kaydedilecek, Word kopyası üretilmeyecek. Hiçbir
+  şey bozulmaz, sadece o ek kolaylık olmaz. İstersen sonradan
+  [python.org](https://python.org)'dan kurup (kurulumda 'Add python.exe to PATH'
+  kutusunu işaretleyerek) bunu etkinleştirebilirsin — kurulumu tekrar yapmana gerek
+  yok, bir sonraki komuttan itibaren otomatik çalışır."
+
+Bu sonucu profile yazma — kalıcı bir alan değil, çünkü kullanıcı sonradan Python
+kurabilir. Yalnızca şimdi söylenen bir bilgi notu; her skill zaten kendi
+çalışmasında aynı kontrolü taze yapar.
+
+### 6. Profili yaz
 
 `${CLAUDE_PLUGIN_ROOT}/CLAUDE.md` şablonunu iskelet olarak kullan;
 `~/.claude/plugins/config/claude-for-legal-turkish/hukuk-asistani/CLAUDE.md` yoluna yaz
@@ -92,7 +118,7 @@ metin olduğunu (istediği programla açabileceğini) iki paragrafta anlat.
 `[YER_TUTUCU]` bırak, `[TARİH]` alanlarına bugünü yaz. Guardrail bölümlerini şablondan
 aynen koru — onlar eklentinin çalışma kurallarıdır, kullanıcı cevabı değildir.
 
-### 6. Onaylat ve turu göster
+### 7. Onaylat ve turu göster
 
 Önce tek paragraf özet: "İşte yakaladıklarım: [rol], [çalışma şekli], [alanlar],
 [il/merciler], belgeler [klasör]'de. Yanlış olan var mı?" Cevabı bekle; düzeltme
